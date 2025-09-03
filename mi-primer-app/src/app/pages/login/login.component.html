@@ -1,0 +1,22 @@
+<div class="login-wrapper">
+  <div class="card">
+    <h2>Login</h2>
+
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="line">
+        <label>Ingresa tu usuario</label>
+        <input type="text" formControlName="user" />
+      </div>
+
+      <div class="line">
+        <label>Password</label>
+        <input type="{{ isPassVisible ? 'password' : 'text' }}" formControlName="pass" />
+        <button class toggle (click)="changeVisivility()"  type="button">{{ isPassVisible ? '🙈' : '👁️' }}</button>
+      </div>
+
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <p *ngIf="error" style="color: red">{{ error }}</p>
+  </div>
+</div>

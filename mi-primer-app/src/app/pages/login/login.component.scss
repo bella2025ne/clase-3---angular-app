@@ -1,0 +1,54 @@
+.login-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: lightgrey;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax 3vmax;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 1vmax;
+
+    h2 {
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1vmax;
+      box-sizing: border-box;
+
+      .line {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        button {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: none;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          border: none;
+        }
+        input{
+          height: 30px;
+          padding-right: 30px;
+        }
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
